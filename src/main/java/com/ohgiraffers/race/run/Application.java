@@ -50,8 +50,8 @@ public class Application {
 
         switch (num) {
             case 1:
-                r2.start(num);
                 r1.start(num);
+                r2.start(num);
 
                 rab.sleep();
 
@@ -60,16 +60,16 @@ public class Application {
                 break;
 
             case 2:
-                r2.start(num);
                 r1.start(num);
+                r2.start(num);
 
                 r1.finish(num);
                 r2.finish(num);
                 break;
 
             case 3:
-                r2.start(num);
                 r1.start(num);
+                r2.start(num);
 
                 r1.finish(num);
 
@@ -79,8 +79,8 @@ public class Application {
                 break;
 
             case 4:
-                r2.start(num);
                 r1.start(num);
+                r2.start(num);
 
                 r1.finish(num);
                 r2.finish(num);

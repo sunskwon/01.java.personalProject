@@ -8,18 +8,24 @@ public class Turtle extends Racer {
         switch (num) {
             case 1:
                 System.out.println("거북이가 달리기 시작합니다.");
+                System.out.println();
                 break;
 
             case 2:
                 System.out.println("거북이가 달리기 시작합니다.");
+                System.out.println();
                 break;
 
             case 3:
                 System.out.println("거북이가 (음흉한 미소와 함께) 달리기 시작합니다.");
+                System.out.println();
                 break;
 
             case 4:
                 System.out.println("거북이는 토끼 등에서 쉬고있습니다.");
+                System.out.println();
+                System.out.println("근데 왜 거북이가 토끼 등에 있지?");
+                System.out.println();
                 break;
         }
     }
