@@ -13,12 +13,11 @@ public class Application {
         /* read me
         토끼와 거북이가 경주하는 이야기
         1. 토끼는 출발, 도착과 잠들기를 할 수 있다.
-        2. 거북이는 출발과 도착만 할 수 있다.
-        3. 토끼와 거북이는 동일한 abstract class (Racer)로 부터 상속 받는다.
-        4. abstract class는 시작(start)과 끝(finish)에 관한 출력 반환문(abstract method)을 갖는다.
-        5. abstract method는 정수형 변수를 매개변수로 한다.
-        6. 매개변수에 따라 토끼와 거북이의 경주 회차가 달라진다(switch문 이용).
-           (하지만 이미 모두가 이 이야기의 내용과 결말을 알고있다...)
+        2. 거북이는 출발, 도착과 마주침을 할 수 있다.
+        3. 토끼와 거북이는 동시에 출발한다.
+        4. 토끼와 거북이는 출발과 도착 사이에 임의의 사건을 만날 수 있다.
+        5. 토끼와 거북이는 출발 후 도착까지 일정 시간이 소요된다.
+        6. (4)와 (5)의 이유로 동물들은 도착하지 못할수도 있다.
 
         토끼가 수신할 수 있는 메세지
         1. 출발
@@ -28,11 +27,13 @@ public class Application {
         거북이가 수신할 수 있는 메세지
         1. 출발
         2. 도착
+        3. 마주침
          */
 
         Racer r1 = new Rabbit();
         Racer r2 = new Turtle();
         Rabbit rab = new Rabbit();
+        Turtle tur = new Turtle();
 
         Scanner sc = new Scanner(System.in);
 
@@ -71,6 +72,9 @@ public class Application {
                 r1.start(num);
 
                 r1.finish(num);
+
+                tur.encount();
+
                 r2.finish(num);
                 break;
 

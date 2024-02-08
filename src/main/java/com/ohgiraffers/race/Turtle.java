@@ -53,13 +53,6 @@ public class Turtle extends Racer {
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
-                System.out.println("거북이가 멈춰선 토끼와 강물을 보고 신나게 노래를 부르며 헤엄쳐가기 시작합니다.");
-                System.out.println();
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
                 System.out.println("거북이가 먼저 결승선에 도착했습니다.");
                 System.out.println();
                 System.out.println("그런데 그렇게까지 해서 이기고 싶니?");
@@ -83,5 +76,16 @@ public class Turtle extends Racer {
                 System.out.println("근데 이건 경주가 아니잖아...");
                 break;
         }
+    }
+
+    public void encount() {
+
+                try {
+                    Thread.sleep(3000);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+                System.out.println("거북이가 멈춰선 토끼와 강물을 보고 신나게 노래를 부르며 헤엄쳐가기 시작합니다.");
+                System.out.println();
     }
 }
