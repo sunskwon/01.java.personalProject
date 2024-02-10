@@ -16,12 +16,142 @@ public class Application {
 
         h.setNum();
 
-        la.setPreRaceA();
-        lb.setPreRaceB();
-        lc.setPreRaceC();
+        ha.setPreRace(0);
+        hb.setPreRace(1);
+        hc.setPreRace(2);
 
-        System.out.println(la.getPreRaceA());
-        System.out.println(lb.getPreRaceB());
-        System.out.println(lc.getPreRaceC());
+        System.out.println("===== 예비 경주 결과 (1바퀴) =====");
+        System.out.println("1번 말 : " + ha.getPreRace() + "초");
+        System.out.println("2번 말 : " + hb.getPreRace() + "초");
+        System.out.println("3번 말 : " + hc.getPreRace() + "초");
+        System.out.println("===============================");
+        System.out.println();
+
+        h.beforeRace();
+
+        ha.start();
+        hb.start();
+        hc.start();
+        System.out.println();
+
+        int i = 0;
+        while (i < 4) {
+
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            ha.corner();
+            hb.corner();
+            hc.corner();
+            System.out.println();
+
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            ha.longLine();
+            hb.longLine();
+            hc.longLine();
+            System.out.println();
+
+            try {
+                Thread.sleep(6000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            ha.corner();
+            hb.corner();
+            hc.corner();
+            System.out.println();
+
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            ha.shortLine();
+            hb.shortLine();
+            hc.shortLine();
+            System.out.println();
+
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            System.out.println("===== 중간 결과 (" + (i + 1) + "바퀴) =====");
+            System.out.println("1번 말 : " + ha.getLab() + "초");
+            System.out.println("2번 말 : " + hb.getLab() + "초");
+            System.out.println("3번 말 : " + hc.getLab() + "초");
+            System.out.println("===========================");
+            System.out.println();
+
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            ha.shortLine();
+            hb.shortLine();
+            hc.shortLine();
+            System.out.println();
+
+            i++;
+        }
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        ha.corner();
+        hb.corner();
+        hc.corner();
+        System.out.println();
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        ha.longLine();
+        hb.longLine();
+        hc.longLine();
+        System.out.println();
+
+        try {
+            Thread.sleep(6000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        ha.corner();
+        hb.corner();
+        hc.corner();
+        System.out.println();
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        ha.finish();
+        hb.finish();
+        hc.finish();
+        System.out.println();
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println("========= 최종 결과 =========");
+        System.out.println("1번 말 : " + ha.getLab() + "초");
+        System.out.println("2번 말 : " + hb.getLab() + "초");
+        System.out.println("3번 말 : " + hc.getLab() + "초");
+        System.out.println("===========================");
+        System.out.println();
     }
 }
