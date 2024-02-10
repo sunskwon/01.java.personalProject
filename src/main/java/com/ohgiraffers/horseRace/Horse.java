@@ -4,11 +4,6 @@ public class Horse {
 
     private double preRace;
     private double lab = 0;
-    private double labOne = 0;
-    private double labTwo = 0;
-    private double labThree = 0;
-    private double labFour = 0;
-    private double labFive = 0;
 
     HorseRace horse = new HorseRace();
 
@@ -31,58 +26,6 @@ public class Horse {
 
         return lab;
     }
-
-    public void setLabOne(double labOne) {
-
-        this.labOne = lab;
-    }
-
-    public void setLabTwo(double labTwo) {
-
-        this.labTwo = lab;
-    }
-
-    public void setLabThree(double labThree) {
-
-        this.labThree = lab;
-    }
-
-    public void setLabFour(double labFour) {
-
-        this.labFour = lab;
-    }
-
-    public void setLabFive(double labFive) {
-
-        this.labFive = lab;
-    }
-
-
-    public double getLabOne() {
-
-        return labOne;
-    }
-
-    public double getLabTwo() {
-
-        return labTwo;
-    }
-
-    public double getLabThree() {
-
-        return labThree;
-    }
-
-    public double getLabFour() {
-
-        return labFour;
-    }
-
-    public double getLabFive() {
-
-        return labFive;
-    }
-
 
     public void start() {
 

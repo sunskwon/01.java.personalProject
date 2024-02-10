@@ -107,14 +107,58 @@ public class Application {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        ha.corner();
-        hb.corner();
-        hc.corner();
+        if (ha.getLab() > hb.getLab() && ha.getLab() > hc.getLab()) {
+
+            if (hb.getLab() > hc.getLab()) {
+
+                hc.corner();
+                hb.corner();
+                ha.corner();
+
+            } else {
+
+                hb.corner();
+                hc.corner();
+                ha.corner();
+            }
+
+        } else if (hb.getLab() > ha.getLab() && hb.getLab() > hc.getLab()) {
+
+            if (ha.getLab() > hc.getLab()) {
+
+                hc.corner();
+                ha.corner();
+                hb.corner();
+            } else {
+
+                ha.corner();
+                hc.corner();
+                hb.corner();
+            }
+        } else {
+
+            if (ha.getLab() > hb.getLab()) {
+
+                hb.corner();
+                ha.corner();
+                hc.corner();
+            } else {
+
+                ha.corner();
+                hb.corner();
+                hc.corner();
+            }
+        }
+
+        System.out.println(ha.getLab());
+        System.out.println(hb.getLab());
+        System.out.println(hc.getLab());
         System.out.println();
 
         try {
             Thread.sleep(3000);
-        } catch (InterruptedException e) {
+        } catch (
+                InterruptedException e) {
             throw new RuntimeException(e);
         }
         ha.longLine();
@@ -124,7 +168,8 @@ public class Application {
 
         try {
             Thread.sleep(6000);
-        } catch (InterruptedException e) {
+        } catch (
+                InterruptedException e) {
             throw new RuntimeException(e);
         }
         ha.corner();
@@ -134,7 +179,8 @@ public class Application {
 
         try {
             Thread.sleep(3000);
-        } catch (InterruptedException e) {
+        } catch (
+                InterruptedException e) {
             throw new RuntimeException(e);
         }
         ha.finish();
@@ -144,7 +190,8 @@ public class Application {
 
         try {
             Thread.sleep(3000);
-        } catch (InterruptedException e) {
+        } catch (
+                InterruptedException e) {
             throw new RuntimeException(e);
         }
         System.out.println("========= 최종 결과 =========");
