@@ -9,7 +9,7 @@ public class Horse {
 
     public void setPreRace(int i) {
 
-        this.preRace = 18 + (33 - horse.getWinRate(i)) / 20;
+        this.preRace = 18 + (0.33 - horse.getWinRate(i)) / 20;
     }
 
     public double getPreRace() {

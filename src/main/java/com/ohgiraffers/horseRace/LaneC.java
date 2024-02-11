@@ -11,7 +11,7 @@ public class LaneC extends Horse {
         if (dice > 0.75) {
 
             System.out.println("3번 말이 좋은 출발로 경주를 시작합니다.");
-            temp = (getPreRace() / 6 - (dice - 0.75));
+            temp = (getPreRace() / 6 - (dice - 0.75) * 2);
             setLab(temp);
         } else {
 
@@ -29,12 +29,12 @@ public class LaneC extends Horse {
         if (dice > 0.7) {
 
             System.out.println("3번 말이 좋은 코너링을 보여줍니다.");
-            temp = (getPreRace() / 6 - (dice - 0.7));
+            temp = (getPreRace() / 6 - (dice - 0.7) * 2);
             setLab(temp);
         } else if (dice < 0.2) {
 
             System.out.println("3번 말이 코너링 실수로 실속합니다.");
-            temp = (getPreRace() / 6 + (0.2 - dice));
+            temp = (getPreRace() / 6 + (0.2 - dice) * 2);
             setLab(temp);
         } else {
 
@@ -53,7 +53,7 @@ public class LaneC extends Horse {
         if (dice > 0.75) {
 
             System.out.println("3번 말이 직선코스에서 가속합니다.");
-            temp = (getPreRace() / 3 - (dice - 0.75) * 2);
+            temp = (getPreRace() / 3 - (dice - 0.75) * 6);
             setLab(temp);
         } else {
 
@@ -72,7 +72,7 @@ public class LaneC extends Horse {
         if (dice > 0.75) {
 
             System.out.println("3번 말이 직선코스에서 가속합니다.");
-            temp = (getPreRace() / 6 - (dice - 0.75));
+            temp = (getPreRace() / 6 - (dice - 0.75) * 2);
             setLab(temp);
         } else {
 
@@ -91,7 +91,7 @@ public class LaneC extends Horse {
         if (dice > 0.75) {
 
             System.out.println("3번 말이 마지막으로 힘을냅니다.");
-            temp = (getPreRace() / 6 - (dice - 0.75) * 2);
+            temp = (getPreRace() / 6 - (dice - 0.75) * 3);
             setLab(temp);
         } else {
 

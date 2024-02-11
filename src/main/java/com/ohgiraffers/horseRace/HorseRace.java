@@ -16,15 +16,9 @@ public class HorseRace {
 
     public void setWinRate() {
 
-        winRate[0] = (double) ((int) (setNum[0] / (setNum[0] + setNum[1] + setNum[2]) * 10000)) / 100;
-        winRate[1] = (double) ((int) (setNum[1] / (setNum[0] + setNum[1] + setNum[2]) * 10000)) / 100;
-        winRate[2] = (double) ((int) (setNum[2] / (setNum[0] + setNum[1] + setNum[2]) * 10000)) / 100;
-
-
-        System.out.println(winRate[0]);
-        System.out.println(winRate[1]);
-        System.out.println(winRate[2]);
-
+        winRate[0] = setNum[0] / (setNum[0] + setNum[1] + setNum[2]);
+        winRate[1] = setNum[1] / (setNum[0] + setNum[1] + setNum[2]);
+        winRate[2] = setNum[2] / (setNum[0] + setNum[1] + setNum[2]);
     }
 
     public double getWinRate(int i) {
