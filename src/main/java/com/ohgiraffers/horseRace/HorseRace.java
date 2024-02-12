@@ -26,7 +26,7 @@ public class HorseRace {
         return winRate[i];
     }
 
-    public void beforeRace() {
+    public void startRace() {
 
         try {
             Thread.sleep(5000);

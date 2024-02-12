@@ -10,6 +10,7 @@ public class Application {
         Horse ha = new LaneA();
         Horse hb = new LaneB();
         Horse hc = new LaneC();
+        Lottery l = new Lottery();
 
         h.setNum();
 
@@ -17,14 +18,16 @@ public class Application {
         hb.setPreRace(1);
         hc.setPreRace(2);
 
-        System.out.println("===== 예비 경주 결과 (1바퀴) =====");
+        System.out.println("===== 사전 경주 결과 (1바퀴) =====");
         System.out.println("1번 말 : " + Math.round(ha.getPreRace() * 1000) / 1000.0 + "초");
         System.out.println("2번 말 : " + Math.round(hb.getPreRace() * 1000) / 1000.0 + "초");
         System.out.println("3번 말 : " + Math.round(hc.getPreRace() * 1000) / 1000.0 + "초");
         System.out.println("===============================");
         System.out.println();
 
-        h.beforeRace();
+        l.participate();
+
+        h.startRace();
 
         ha.start();
         hb.start();
@@ -575,5 +578,8 @@ public class Application {
             }
         }
         System.out.println("============================");
+        System.out.println();
+
+        l.result();
     }
 }
