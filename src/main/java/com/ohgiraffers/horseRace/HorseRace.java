@@ -2,9 +2,9 @@ package com.ohgiraffers.horseRace;
 
 public class HorseRace {
 
-    private double[] setNum = new double[3];
-    private static double[] winRate = new double[3];
-
+    private double[] setNum = new double[3];        // 승률 계산을 위한 임의의 수(배열)
+    private static double[] winRate = new double[3];        // 승률(배열)
+    // 임의의 수 생성
     public void setNum() {
 
         this.setNum[0] = Math.random();
@@ -13,7 +13,7 @@ public class HorseRace {
 
         setWinRate();
     }
-
+    // 임의의 수 기반 승률 계산
     public void setWinRate() {
 
         winRate[0] = setNum[0] / (setNum[0] + setNum[1] + setNum[2]);
@@ -25,7 +25,7 @@ public class HorseRace {
 
         return winRate[i];
     }
-
+    // 경주 시작(별 의미 없음)
     public void startRace() {
 
         try {
